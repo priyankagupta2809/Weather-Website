@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Weather API</title>
+
+
+    <!-- bootstrap cdn -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-KyZXEAg3QhqLMpG8r+8fhAXLRk2vvoC2f3B09zVXn8CA5QIVfZOJ3BCsw2P0p/We" crossorigin="anonymous">
+
+</head>
+
+<body class="py-3 text-white"
+    style="min-height:100vh;background:url(back.jpg);background-repeat:no-repeat;background-size:cover;background-position:right;">
+
+    <main style="z-index:10;">
+        <h5 class="text-white text-center p-2">
+            Allow to access your location or search for your location
+        </h5>
+
+        <div class="mt-5 row px-2 mx-auto" style="max-width:800px">
+            <input id="inputField" type="text" class="col-12 col-sm-8 border border-info py-2"
+                placeholder="city name, country name shortcode">
+            <input onclick="getWeatherFromName()" type="button" value="Get Weather Details"
+                class="col-12 col-sm-4 border-0 border-info bg-info fw-bold text-white py-2">
+        </div>
+
+        <div id="weather-details" class="text-center my-5" style="padding-top:10vh">Allow Location Permission
+        </div>
+    </main>
+
+    <div style="
+        position: fixed;
+        top:0;left:0;
+        width:100%; height:100%;
+        background:radial-gradient(rgba(0,0,0,.6),rgba(0,0,0,0));
+        border-radius:20px;
+        z-index: -1;"></div>
+
+
+    <script src="weather-api.js"></script>
+</body>
+
+</html>
